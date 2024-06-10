@@ -15,8 +15,11 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
+import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
+import com.google.firebase.appcheck.FirebaseAppCheck
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
 import com.google.firebase.auth.*
 import java.util.concurrent.TimeUnit
 
@@ -34,6 +37,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
+        FirebaseApp.initializeApp(this)
+
+        // Initialize App Check
+        val firebaseAppCheck = FirebaseAppCheck.getInstance()
+        firebaseAppCheck.installAppCheckProviderFactory(
+            PlayIntegrityAppCheckProviderFactory.getInstance()
+        )
         auth = FirebaseAuth.getInstance()
         etPhoneNumber = findViewById(R.id.etMobile)
         etName = findViewById(R.id.etName)
@@ -132,6 +142,7 @@ class LoginActivity : AppCompatActivity() {
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
+
 
     private fun hideKeyboard() {
         val view: View? = this.currentFocus
