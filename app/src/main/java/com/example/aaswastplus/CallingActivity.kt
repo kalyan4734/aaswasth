@@ -41,7 +41,7 @@ class CallingActivity : AppCompatActivity() {
     private var currentIndex = 0
     private lateinit var job: Job
     private lateinit var job1: Job
-    private val phoneNumber = "tel:+919848182726"
+    private val phoneNumber = "tel:+919096561360"
     private var timerCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
