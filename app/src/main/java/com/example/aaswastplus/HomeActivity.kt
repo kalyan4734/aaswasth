@@ -7,6 +7,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var tvName: TextView
@@ -31,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
         tvTime = findViewById(R.id.tvDocTime)
         tvDocImg = findViewById(R.id.tvDocImg)
         customSeekBar = findViewById(R.id.seekBar)
+        val ccDoc : ConstraintLayout = findViewById(R.id.ccDoc)
         val sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE)
         val name = sharedPref.getString("name", "")
         tvName.text = "Hello $name"
@@ -38,6 +40,7 @@ class HomeActivity : AppCompatActivity() {
             tvDocName.text = getString(R.string.amb_arri)
             tvTime.text = getString(R.string.amb_arrives_in)
             tvDocImg.setBackgroundResource(R.drawable.amubu)
+            ccDoc.setPadding(10,10,10,20)
         }
         customSeekBar.progress = 0
         customSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -60,5 +63,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         customSeekBar.progress = 0
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
     }
 }

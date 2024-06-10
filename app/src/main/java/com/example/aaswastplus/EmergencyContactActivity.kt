@@ -12,7 +12,7 @@ class EmergencyContactActivity : AppCompatActivity() {
         supportActionBar?.hide()
         val btnEmer: TextView = findViewById(R.id.btnSaveEmer)
         btnEmer.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, ProfileSavedActivity::class.java))
         }
         val btnGoBack :  TextView = findViewById(R.id.btnThreeGoBack)
         btnGoBack.setOnClickListener {

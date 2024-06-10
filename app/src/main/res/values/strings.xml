@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">aaswastplus</string>
+    <string name="app_name">Aashwast Plus</string>
     <string name="splash_image">splash</string>
     <string name="language">Language</string>
     <string name="languageDescription">Choose your preferred language</string>
@@ -20,8 +20,8 @@
     <string name="welldone_sub">Please note that the emergency button will be found at the bottom of the app</string>
     <string name="login">Login</string>
     <string name="login_sub">Enter your name and mobile number</string>
-    <string name="name">Name*</string>
-    <string name="mobile">Mobile Number*</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile Number</string>
     <string name="otp">OTP</string>
     <string name="login_successfull">Login successful</string>
     <string name="login_msg">You have logged in</string>
@@ -52,10 +52,10 @@
     <string name="bn">B -ve</string>
     <string name="abp">AB +ve</string>
     <string name="abn">AB -ve</string>
-    <string name="tvContact1">Contact1*</string>
-    <string name="tvContact2">Contact2</string>
-    <string name="tvContact3">Contact3</string>
-    <string name="profile_saved">Profile Saved</string>
+    <string name="tvContact1">Contact 1*</string>
+    <string name="tvContact2">Contact 2</string>
+    <string name="tvContact3">Contact 3</string>
+    <string name="profile_saved">Profile Created</string>
     <string name="profile_saved_sub">You will now be taken to the  main page of the app</string>
     <string name="doc_visit">Nitin K will assist you to your doctor’s appointment</string>
     <string name="doc_time">19 April   |  10:30 am</string>
@@ -71,12 +71,21 @@
     <string name="beds">Beds</string>
     <string name="oxyxen">Oxygen</string>
     <string name="slide_text">Use button in case of a medical emergency</string>
-    <string name="calling">Calling Aashwasth</string>
+    <string name="calling">Calling Aashwast</string>
     <string name="callingSpeaker">Your speaker phone has been turned on</string>
     <string name="invalid_mobile">Invalid mobile number, check again</string>
     <string name="hello">Hello Ramesh!</string>
     <string name="amb_arri">Ambulance has been dispatched and will arrive shortly</string>
     <string name="amb_arrives_in">Arriving in 15 min</string>
     <string name="marathi">Marathi</string>
+    <string name="amublance_arraiving">Ambulance is arriving in</string>
+    <string name="mins">15 min</string>
+    <string name="text_paramedics">Paramedics: Nandan K, Swapnil</string>
+    <string name="upon_evalution">Upon evaluation, you will be transferred to the closest hospital if necessary</string>
+    <string name="emergency_alert">Your emergency contacts have been alerted</string>
+    <string name="call_paramedic">Call Paramedic</string>
+    <string name="book_home">Book at Home Services</string>
+    <string name="rent">Rent Medical Supplies</string>
+    <string name="book_Companion">Book Companion Services</string>
 
 </resources>
