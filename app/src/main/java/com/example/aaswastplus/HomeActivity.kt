@@ -13,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var tvDocName: TextView
     private lateinit var tvTime: TextView
     private lateinit var tvDocImg: TextView
+    private lateinit var customSeekBar: SeekBar
     private var isFromBack :Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
         tvDocName = findViewById(R.id.tvDocName)
         tvTime = findViewById(R.id.tvDocTime)
         tvDocImg = findViewById(R.id.tvDocImg)
+        customSeekBar = findViewById(R.id.seekBar)
         val sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE)
         val name = sharedPref.getString("name", "")
         tvName.text = "Hello $name"
@@ -37,8 +39,7 @@ class HomeActivity : AppCompatActivity() {
             tvTime.text = getString(R.string.amb_arrives_in)
             tvDocImg.setBackgroundResource(R.drawable.amubu)
         }
-
-        val customSeekBar: SeekBar = findViewById(R.id.seekBar)
+        customSeekBar.progress = 0
         customSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 if(progress == 100){
@@ -54,5 +55,10 @@ class HomeActivity : AppCompatActivity() {
                 // Handle stop of touch
             }
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        customSeekBar.progress = 0
     }
 }

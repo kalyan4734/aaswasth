@@ -6,10 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.doOnTextChanged
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -27,6 +24,7 @@ class OtpActivity : AppCompatActivity() {
     private lateinit var  btnGoBack: TextView
     private lateinit var verificationId: String
     private lateinit var mobileNumber: String
+    private lateinit var ccProgress: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +34,7 @@ class OtpActivity : AppCompatActivity() {
         verificationId = intent.getStringExtra("verificationId") ?: ""
         mobileNumber = intent.getStringExtra("mobileNumber") ?: ""
         val mobileText: TextView = findViewById(R.id.tvOtpText)
+        ccProgress = findViewById(R.id.ccProgress)
         btnVerifyOtp = findViewById(R.id.btnLogin)
         btnGoBack = findViewById(R.id.btnThreeGoBack)
         mobileText.text = "Enter OTP sent to $mobileNumber"
@@ -72,8 +71,9 @@ class OtpActivity : AppCompatActivity() {
             finish()
         }
         btnVerifyOtp.setOnClickListener {
-            startActivity(Intent(this@OtpActivity, LoginSuccessActivity::class.java))
-        //verifyCode(etOtp1.text.trim().toString()+etOtp2.text.trim().toString()+etOtp3.text.trim().toString()+etOtp4.text.trim().toString()+etOtp5.text.trim().toString()+etOtp6.text.trim().toString())
+            ccProgress.visibility = View.VISIBLE
+         //   startActivity(Intent(this@OtpActivity, LoginSuccessActivity::class.java))
+        verifyCode(etOtp1.text.trim().toString()+etOtp2.text.trim().toString()+etOtp3.text.trim().toString()+etOtp4.text.trim().toString()+etOtp5.text.trim().toString()+etOtp6.text.trim().toString())
         }
 
     }
@@ -87,6 +87,7 @@ class OtpActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    ccProgress.visibility = View.GONE
                     Toast.makeText(this, "Verification Successful", Toast.LENGTH_SHORT).show()
                     val sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE)
                     val editor = sharedPref.edit()
@@ -95,6 +96,7 @@ class OtpActivity : AppCompatActivity() {
                     // Proceed to the next activity or home screen
                     startActivity(Intent(this@OtpActivity, LoginSuccessActivity::class.java))
                 } else {
+                    ccProgress.visibility = View.GONE
                     Toast.makeText(this, "Verification Failed", Toast.LENGTH_SHORT).show()
                 }
             }

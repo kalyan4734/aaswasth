@@ -142,7 +142,7 @@
         android:text="@string/pincode"
         android:textColor="@color/lightBlack"
         android:textSize="14sp"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@+id/etRes"
         app:layout_constraintStart_toStartOf="@id/etPinCode"
         />

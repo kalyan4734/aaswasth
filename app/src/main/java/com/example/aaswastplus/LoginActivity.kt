@@ -56,17 +56,13 @@ class LoginActivity : AppCompatActivity() {
             if (phoneNumber.isEmpty() || phoneNumber.length < 10) {
                 invalidMobile.visibility = View.VISIBLE
                 etPhoneNumber.background = getDrawable(R.drawable.error_edit_text)
-               // sendVerificationCode("+91$phoneNumber")
 
             } else {
                 val sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE)
                 val editor = sharedPref.edit()
                 editor.putString("name", etName.text.toString())  // or false
                 editor.apply()
-                val intent = Intent(this@LoginActivity, OtpActivity::class.java)
-                intent.putExtra("verificationId", "")
-                intent.putExtra("mobileNumber", phoneNumber)
-                startActivity(intent)
+                 sendVerificationCode("+91$phoneNumber")
             }
 
         }

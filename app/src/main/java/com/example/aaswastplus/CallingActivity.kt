@@ -9,7 +9,10 @@ import android.os.Looper
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.Manifest
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import kotlinx.coroutines.*
 
 class CallingActivity : AppCompatActivity() {
@@ -54,7 +57,11 @@ class CallingActivity : AppCompatActivity() {
             while (currentIndex < images.size) {
                 imageView.setImageResource(images[currentIndex])
                 currentIndex++
-                if (currentIndex > 4) tvSpeaker.visibility = View.VISIBLE
+                if (currentIndex > 4){   tvCancelCall.setOnClickListener {
+                   finish()
+                }
+                    tvSpeaker.visibility = View.VISIBLE
+                }
                 delay(1000) // Change every second
             }
             setTimer()
@@ -70,9 +77,11 @@ class CallingActivity : AppCompatActivity() {
                     if (timerCount < 9) "00:0$timerCount" else if (timerCount in 60..68) "01:0$timerCount" else "00:$timerCount"
                 timerCount++
                 delay(1000)
-                tvCancelCall.setOnClickListener {
-                    startActivity(Intent(this@CallingActivity, SuccessActivity::class.java))
-                }
+                if(timerCount == 1)   makePhoneCall(phoneNumber)
+            }
+
+            tvCancelCall.setOnClickListener {
+                startActivity(Intent(this@CallingActivity, SuccessActivity::class.java))
             }
         }
     }
@@ -81,7 +90,12 @@ class CallingActivity : AppCompatActivity() {
     private fun makePhoneCall(phoneNumber: String) {
         val callIntent = Intent(Intent.ACTION_CALL)
         callIntent.data = Uri.parse(phoneNumber)
-        startActivity(callIntent)
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 1)
+        } else {
+            startActivity(callIntent)
+        }
 
     }
 
