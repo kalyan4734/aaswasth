@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BloodGroupActivity">
+
+    <TextView
+        android:id="@+id/tvTwoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/blood"
+        android:textColor="@color/lightBlack"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTwoSub"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="@string/blood_sub"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTwoHeader" />
+
+
+    <TextView
+        android:id="@+id/tvOp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:maxLines="2"
+        android:text="@string/op"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:background="@drawable/textview_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTwoSub" />
+
+    <TextView
+        android:id="@+id/tvOn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_bg"
+        android:layout_marginTop="40dp"
+        android:maxLines="2"
+        android:text="@string/on"
+        android:gravity="center"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTwoSub" />
+
+    <TextView
+        android:id="@+id/tvAp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/ap"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:background="@drawable/textview_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOp" />
+
+    <TextView
+        android:id="@+id/tvAn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_bg"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/an"
+        android:gravity="center"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOp" />
+
+    <TextView
+        android:id="@+id/tvBp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/bp"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:background="@drawable/textview_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAp" />
+
+    <TextView
+        android:id="@+id/tvBn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_bg"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/bn"
+        android:gravity="center"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAp" />
+
+    <TextView
+        android:id="@+id/tvAbp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/abp"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:background="@drawable/textview_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBp" />
+
+    <TextView
+        android:id="@+id/tvAbn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_bg"
+        android:layout_marginTop="20dp"
+        android:maxLines="2"
+        android:text="@string/abn"
+        android:gravity="center"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginEnd="20dp"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBp" />
+
+    <TextView
+        android:id="@+id/btnThreeGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/go_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

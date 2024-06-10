@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "502752223959",
+    "project_id": "assawasth",
+    "storage_bucket": "assawasth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502752223959:android:8199c97178cac1ec8f4692",
+        "android_client_info": {
+          "package_name": "com.example.aaswastplus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjCF9U0ybjke-H9xsyenS3cBRx7T21cNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

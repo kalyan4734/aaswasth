@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmergencyContactActivity">
+
+
+    <ScrollView
+        android:id="@+id/scView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/tvTwoHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/emergency_contact"
+                android:textColor="@color/lightBlack"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTwoSub"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="@string/emergency_contact_sub"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTwoHeader" />
+
+            <TextView
+                android:id="@+id/tvContactOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="@string/tvContact1"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTwoSub" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/name"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactOne"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                android:background="@drawable/edit_text_background_dr"/>
+
+
+            <TextView
+                android:id="@+id/tvMobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/mobile"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/etName"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="5dp"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber"
+                android:background="@drawable/edit_text_background_dr"/>
+
+
+
+            <TextView
+                android:id="@+id/tvContactTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="@string/tvContact2"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etMobile" />
+
+            <TextView
+                android:id="@+id/tvName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/name"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etName1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvName1"
+                android:background="@drawable/edit_text_background_dr"/>
+
+
+            <TextView
+                android:id="@+id/tvMobileNumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/mobile"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/etName1"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etMobile1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="5dp"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber1"
+                android:background="@drawable/edit_text_background_dr"/>
+
+            <TextView
+                android:id="@+id/tvContactThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="@string/tvContact3"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etMobile1" />
+
+            <TextView
+                android:id="@+id/tvName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/name"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvContactThree"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etName3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvName3"
+                android:background="@drawable/edit_text_background_dr"/>
+
+
+            <TextView
+                android:id="@+id/tvMobileNumber3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/mobile"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/etName3"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/etMobile3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="5dp"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber3"
+                android:background="@drawable/edit_text_background_dr"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/btnThreeGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/go_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnSaveEmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
