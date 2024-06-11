@@ -408,10 +408,11 @@
                     android:layout_marginTop="10dp"
                     android:maxLines="2"
                     android:text="@string/wheelChair"
-                    android:textAlignment="textStart"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/ivWheelChair"
+                    app:layout_constraintEnd_toEndOf="@id/ivWheelChair"
                     app:layout_constraintTop_toBottomOf="@id/ivWheelChair" />
 
                 <ImageView
@@ -430,10 +431,11 @@
                     android:layout_marginTop="10dp"
                     android:maxLines="2"
                     android:text="@string/beds"
-                    android:textAlignment="textStart"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="@id/ivBeds"
+                    app:layout_constraintEnd_toEndOf="@id/ivBeds"
                     app:layout_constraintTop_toBottomOf="@id/ivBeds" />
 
 
@@ -452,10 +454,11 @@
                     android:layout_marginTop="10dp"
                     android:maxLines="2"
                     android:text="@string/oxyxen"
-                    android:textAlignment="textStart"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="@id/ivOxygen"
+                    app:layout_constraintEnd_toEndOf="@id/ivOxygen"
                     app:layout_constraintTop_toBottomOf="@id/ivOxygen" />
 
 
@@ -467,7 +470,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomLayout"
         android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:background="#FFFFFf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -477,12 +480,11 @@
             android:id="@+id/tvText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:text="@string/slide_text"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/ccBtnEmergency"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -505,7 +507,7 @@
                 android:id="@+id/tvSlideEmergency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/slide_for_emergency"
                 android:textColor="@color/red"
                 android:textSize="18sp"

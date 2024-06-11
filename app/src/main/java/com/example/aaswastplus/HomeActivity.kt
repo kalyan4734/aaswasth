@@ -41,6 +41,9 @@ class HomeActivity : AppCompatActivity() {
             tvTime.text = getString(R.string.amb_arrives_in)
             tvDocImg.setBackgroundResource(R.drawable.amubu)
             ccDoc.setPadding(10,10,10,20)
+            ccDoc.setOnClickListener {
+                startActivity(Intent(this@HomeActivity, SuccessActivity::class.java))
+            }
         }
         customSeekBar.progress = 0
         customSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

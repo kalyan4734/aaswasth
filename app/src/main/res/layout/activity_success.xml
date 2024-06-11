@@ -157,7 +157,7 @@
         android:padding="5dp"
         android:drawablePadding="5dp"
         android:textColor="@color/lightBlack"
-        android:drawableStart="@drawable/baseline_arrow_circle_down_24"
+        android:drawableStart="@drawable/error"
         android:text="@string/emergency_alert"
         android:background="@drawable/emergency_alert"
         app:layout_constraintTop_toBottomOf="@id/tvDocsDesc" />
@@ -177,7 +177,6 @@
         android:textSize="20sp"
         android:text="@string/call_paramedic"
         android:gravity="center"
-        android:textStyle="bold"
         android:background="@drawable/green_button"
         app:layout_constraintBottom_toBottomOf="parent" />
 
